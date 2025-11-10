@@ -1,0 +1,23 @@
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Nav from './Components/Nav'
+import Index from './Pages/Index'
+
+function App() {
+
+  return (
+    <>
+      <BrowserRouter>
+        <Nav/>
+        <Routes>
+          <Route path="/" element={<Index/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App
+
+// https://nova-portfolio-reactjs.vercel.app/
+// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4
