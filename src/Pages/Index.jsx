@@ -23,6 +23,8 @@ import team2 from "../assets/Images/team-02.png"
 import team3 from "../assets/Images/team-03.png"
 import team4 from "../assets/Images/team-04.png"
 
+import CountUp from "react-countup"
+
 export default function Index() {
   const [activeIndex, setActiveIndex] = useState(1)
 
@@ -94,6 +96,37 @@ export default function Index() {
       role: "Estrategista de Conteúdo",
       Image: team4,
       letter: "H",
+    },
+  ]
+
+  const testimonials = [
+    {
+      id: 1,
+      text: "O alto nível de atendimento ao cliente deles complementou sua expertise técnica. Eles foram atenciosos, prestativos e comunicativos. A dedicação deles ao projeto foi impressionante.",
+      name: "Jessica Brown",
+      role: "Design Quality",
+      rating: 4.5,
+    },
+    {
+      id: 2,
+      text: "Trabalhar com [Nome do Estúdio] foi perfeito (ou muito fácil). Eles entenderam a nossa visão e a traduziram lindamente em uma experiência digital. Sempre pontuais e proativos!",
+      name: "Rohan Mehta",
+      role: "Creative Director",
+      rating: 4.5,
+    },
+    {
+      id: 3,
+      text: "A atenção da equipe aos detalhes e a criatividade nos ajudaram a nos destacar da concorrência. Altamente recomendável para uma colaboração de longo prazo.",
+      name: "Emily Davis",
+      role: "Brand Manager",
+      rating: 4.5,
+    },
+    {
+      id: 4,
+      text: "Equipe profissional e confiável! Eles lidaram com requisitos complexos de forma suave e superaram nossas expectativas com suas soluções.",
+      name: "Arjun Patel",
+      role: "Startup Founder",
+      rating: 4.5,
     },
   ]
 
@@ -426,19 +459,228 @@ export default function Index() {
                   alt={member.name}
                   className="w-full h-auto scale-110 grayscale group-hover:scale-110 group-hover:grayscale-0 transition-all duration-500 ease-[cubic-bezier(0.3,0,0.3,1)]"
                 />
-                <div 
+                <div
                   className="num absolute -right-3 md:-right-5 bottom-0 text-[180px] sm:text-[200px] md:text-[240px] font-bold leading-[0.5] group-hover:text-primary pointer-events-none transition-all durantion-500 ease-[cubic-bezier(0.3,0,0.3,1)]"
                   style={{
-                    textShadow: "1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000",
+                    textShadow:
+                      "1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000",
                   }}
                 >
-                  <span>{member.letter}</span> 
+                  <span>{member.letter}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Testimonial */}
+      <div className="testimonials py-[8%] px-[2%] md:px-[8%] xl:px-[12%] flex flex-col lg:flex-row justify-between items-start gap-10">
+        <div className="tst-content w-full lg:w-1/2 text-white">
+          <h2 className="text-3xl sm:text-4xl font-semibold sm:max-w-3xl my-5 mb-4 leading-tight text-white">
+            Depoimentos
+          </h2>
+          <div className="font-normal text-xl flex items-center">
+            4.5{""}
+            <span className="flex text-yellow-400 ml-2">
+              <Icon
+                icon="material-symbols:star-rounded"
+                width="24"
+                height="24"
+              />
+              <Icon
+                icon="material-symbols:star-rounded"
+                width="24"
+                height="24"
+              />
+              <Icon
+                icon="material-symbols:star-rounded"
+                width="24"
+                height="24"
+              />
+              <Icon
+                icon="material-symbols:star-rounded"
+                width="24"
+                height="24"
+              />
+              <Icon icon="ic:round-star-half" width="24" height="24" />
+            </span>{" "}
+            Avaliação de Todos os Clientes
+          </div>
+        </div>
+
+        <div className="w-full lg:w-1/2 border-l border-white ps-10">
+          <Splide
+            options={{
+              type: "fade",
+              rewind: true,
+              autoPlay: true,
+              interval: 4000,
+              pauseOnHover: true,
+              arrows: false,
+              pagination: false,
+              speed: 800,
+            }}
+          >
+            {testimonials.map((t) => (
+              <SplideSlide key={t.id}>
+                <div className="text-white">
+                  <p className="text-gray-400 text-2xl md:text-3xl max-w-2xl leading-tight mb-6 font-medium">
+                    {t.text}
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-medium">{t.name}</h3>
+                  <span className="text-gray-300">{t.role}</span>
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+      </div>
+
+      {/* Counts */}
+      <div className="grid grid-cols-1 py-[8%] sm:grid-cols-3 gap-12 px-[2%] md:px-[8%] xl:px-[12%]">
+        <div className="text-center">
+          <h2
+            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            style={{
+              WebkitTextStroke: "2px white",
+            }}
+          >
+            <CountUp start={0} end={23} duration={2} />
+          </h2>
+          <p className="text-gray-300 text-lg font-semibold mt-3">Equipe</p>
+        </div>
+
+        <div className="text-center">
+          <h2
+            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            style={{
+              WebkitTextStroke: "2px white",
+            }}
+          >
+            <CountUp start={0} end={99} duration={2.5} />+
+          </h2>
+          <p className="text-gray-300 text-lg font-semibold mt-3">
+            Projetos Concluídos
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2
+            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            style={{
+              WebkitTextStroke: "2px white",
+            }}
+          >
+            <CountUp start={0} end={12} duration={2.5} />M
+          </h2>
+          <p className="text-gray-300 text-lg font-semibold mt-3">
+            Linhas de Código
+          </p>
+        </div>
+      </div>
+
+      {/* Get In Touch */}
+      <div className="py-[8%]">
+        <div className="contact py-[8%] px-[2%] md:px-[8%] xl:px-[12%] h-[800px] relative">
+          <div className="team-content w-full lg:w-[60%] md-10">
+            <span className="text-black bg-primary px-2 py-3 font-semibold text-md sm:text-xl rounded-sm">
+              Fale Conosco
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-semibold sm:max-w-3xl mt-5 mb-4 leading-tight text-white">
+              Envie-nos Suas Ideias Brilhantes
+            </h2>
+            <Link
+              to="/contact"
+              className="text-primary text-3xl lg:text-5xl font-semibold"
+            >
+              Info@yourcompany.com
+            </Link>
+            <p className="text-gray-100 text-xl pt-5">
+              123 Business Avenue, Los Angeles, CA 90001, Estados Unidos.
+            </p>
+          </div>
+          <div className="contact-image">
+            <div className="cat-img-circle img-circle--1"></div>
+            <div className="cat-img-circle img-circle--2"></div>
+            <div className="cat-img-circle img-circle--3"></div>
+
+            <ul className="text-white grid grid-cols-2 gap-10 absolute right-0 bottom-60 social-icons">
+              <li>
+                <Link
+                  to="/"
+                  className="social-icon relative overflow-hidden p-10 text-xl font-bold h-[100px] rounded-full bg-black flex gap-8 items-center"
+                >
+                  <Icon
+                    icon="ri:facebook-fill"
+                    width="44"
+                    height="44"
+                    className="text-black bg-white p-2 rounded-full"
+                  />
+                  <span>Facebook</span>
+                </Link>
+              </li>
+              
+              <li>
+                <Link
+                  to="/"
+                  className="social-icon relative overflow-hidden p-10 text-xl font-bold h-[100px] rounded-full bg-black flex gap-8 items-center"
+                >
+                  <Icon
+                    icon="iconoir:instagram"
+                    width="44"
+                    height="44"
+                    className="text-black bg-white p-2 rounded-full"
+                  />
+                  <span>Instagram</span>
+                </Link>
+              </li>
+              
+              <li>
+                <Link
+                  to="/"
+                  className="social-icon relative overflow-hidden p-10 text-xl font-bold h-[100px] rounded-full bg-black flex gap-8 items-center"
+                >
+                  <Icon
+                    icon="ri:twitter-fill"
+                    width="44"
+                    height="44"
+                    className="text-black bg-white p-2 rounded-full"
+                  />
+                  <span>Twitter</span>
+                </Link>
+              </li>
+              
+              <li>
+                <Link
+                  to="/"
+                  className="social-icon relative overflow-hidden p-10 text-xl font-bold h-[100px] rounded-full bg-black flex gap-8 items-center"
+                >
+                  <Icon
+                    icon="ri:linkedin-fill"
+                    width="44"
+                    height="44"
+                    className="text-black bg-white p-2 rounded-full"
+                  />
+                  <span>LinkedIn</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Blog */}
+      {/* <div className="team py-[8%] px-[2%] md:px-[8%] xl:px-[12%]">
+        <div className="team-content w-full lg:w-[60%] md-10">
+          <span className="text-black bg-primary px-2 py-3 font-semibold text-md sm:text-xl rounded-sm">
+            Time de Especialistas
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-semibold sm:max-w-3xl mt-5 mb-4 leading-tight text-white">
+            Oferecemos serviços incríveis para nossos clientes.
+          </h2>
+        </div>
+      </div> */}
     </>
   )
 }

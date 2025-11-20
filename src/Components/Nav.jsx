@@ -15,6 +15,13 @@ export default function Nav() {
     const handleScroll = () => {
       setNavBg(window.scrollY > 100)
     }
+
+    window.addEventListener("scroll", handleScroll)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   return (
@@ -165,7 +172,7 @@ export default function Nav() {
                   Blog
                 </Link>
               </li>
-              
+
               <li>
                 <Link
                   to="/blog/1"
