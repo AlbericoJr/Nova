@@ -25,6 +25,19 @@ import team4 from "../assets/Images/team-04.png"
 
 import CountUp from "react-countup"
 
+import blog1 from "../assets/Images/blog_01.jpg"
+import blog2 from "../assets/Images/blog_02.jpg"
+import blog3 from "../assets/Images/blog_03.jpg"
+
+import brand1 from "../assets/Images/brand1.png"
+import brand2 from "../assets/Images/brand2.png"
+import brand3 from "../assets/Images/brand3.png"
+import brand4 from "../assets/Images/brand4.png"
+import brand5 from "../assets/Images/brand5.png"
+import brand6 from "../assets/Images/brand6.png"
+import brand7 from "../assets/Images/brand7.png"
+
+
 export default function Index() {
   const [activeIndex, setActiveIndex] = useState(1)
 
@@ -127,6 +140,37 @@ export default function Index() {
       name: "Arjun Patel",
       role: "Startup Founder",
       rating: 4.5,
+    },
+  ]
+
+  const blogs = [
+    {
+      id: 1,
+      date: "Abril 10, 2025",
+      category: "Art",
+      title: "Explore seus pontos fortes e impulsione seu negócio!",
+      description:
+        "Ambleton: Por trás da marca da comunidade High Calgary. As construtoras e imobiliárias mais inovadoras e bem-sucedidas...",
+      image: blog1,
+    },
+    {
+      id: 2,
+      date: "Maio 15, 2025",
+      category: "Marketing",
+      title: "5 passos para criar um plano de marketing excepcional",
+      description:
+        "Ambleton: Por trás da marca da comunidade High Calgary. As construtoras e imobiliárias mais inovadoras e bem-sucedidas...",
+      image: blog2,
+    },
+    {
+      id: 3,
+      date: "Maio 20, 2025",
+      category: "Redação publicitária",
+      title:
+        "10 dicas de revisão de conteúdo para detectar mais erros evitáveis",
+      description:
+        "Ambleton: Por trás da marca da comunidade High Calgary. As construtoras e imobiliárias mais inovadoras e bem-sucedidas...",
+      image: blog3,
     },
   ]
 
@@ -620,7 +664,7 @@ export default function Index() {
                   <span>Facebook</span>
                 </Link>
               </li>
-              
+
               <li>
                 <Link
                   to="/"
@@ -635,7 +679,7 @@ export default function Index() {
                   <span>Instagram</span>
                 </Link>
               </li>
-              
+
               <li>
                 <Link
                   to="/"
@@ -650,7 +694,7 @@ export default function Index() {
                   <span>Twitter</span>
                 </Link>
               </li>
-              
+
               <li>
                 <Link
                   to="/"
@@ -671,16 +715,152 @@ export default function Index() {
       </div>
 
       {/* Blog */}
-      {/* <div className="team py-[8%] px-[2%] md:px-[8%] xl:px-[12%]">
-        <div className="team-content w-full lg:w-[60%] md-10">
+      <div className="blog py-[8%] px-[2%] md:px-[8%] xl:px-[12%]">
+        <div className="blog-content w-full lg:w-[60%] md-10">
           <span className="text-black bg-primary px-2 py-3 font-semibold text-md sm:text-xl rounded-sm">
-            Time de Especialistas
+            Notícias e Blog
           </span>
-          <h2 className="text-2xl sm:text-4xl font-semibold sm:max-w-3xl mt-5 mb-4 leading-tight text-white">
-            Oferecemos serviços incríveis para nossos clientes.
+          <h2 className="text-2xl md:text-3xl lg:text-6xl font-semibold sm:max-w-5xl mt-5 mb-4 leading-tight text-white">
+            Análises, reflexões, tendências do setor, dicas de marketing e muito
+            mais.
           </h2>
         </div>
-      </div> */}
+        <div className="blog-wrapper grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="blog-item group flex flex-col text-white"
+            >
+              <div className="blog-image overflow-hidden rounded-lg">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-300"
+                />
+              </div>
+              <div className="blog-content pt-5">
+                <p className="text-lg font-semibold pb-2">
+                  <span className="bg-lime-300 text-black px-3 py-1 rounded-full me-3">
+                    {blog.date}
+                  </span>
+                  {blog.category}
+                </p>
+                <Link 
+                  to={`/blog/${blog.id}`}
+                  className="text-xl font-semibold hover:text-lime-300 transition"
+                >
+                  {blog.title}
+                </Link>
+                <p className="text-md text-gray-300 mt-3">{blog.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Brand */}
+      <div className="brand py-[8%] px-[2%] md:px-[8%] xl:px-[12%]">
+        <div className="brand-content w-full lg:w-[60%] md-10">
+          <span className="text-black bg-primary px-2 py-3 font-semibold text-md sm:text-xl rounded-sm">
+            Clientes fantásticos e premium
+          </span>
+          <h2 className="text-2xl md:text-3xl lg:text-6xl font-semibold sm:max-w-5xl mt-5 mb-4 leading-tight text-white">
+            Tivemos o prazer de trabalhar com alguns clientes.
+          </h2>
+        </div>
+        <div className="brand-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand1} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand2} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand3} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand4} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand5} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand6} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand7} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+          <Link
+            to="https://www.google.com/"
+            className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
+          >
+            <img 
+              src={brand2} 
+              alt="brand-image"
+              className="object-contain" 
+            />
+            <span>Ver site</span>
+          </Link>
+        </div>
+      </div>
+
+      
     </>
   )
 }
