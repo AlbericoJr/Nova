@@ -22,4 +22,4 @@ function App() {
 export default App
 
 // https://nova-portfolio-reactjs.vercel.app/
-// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4
+// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4 2:3650
