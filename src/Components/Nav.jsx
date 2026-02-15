@@ -96,7 +96,7 @@ export default function Nav() {
               <Icon
                 icon="ri:arrow-down-s-line"
                 width="40"
-                hanging="40"
+                height="40"
                 className={`transition-all duration-300 ${
                   openDropdown === "pages" ? "rotate-180" : ""
                 }`}
@@ -113,7 +113,11 @@ export default function Nav() {
               {["Equipe", "Serviços", "Plano", "FAQ"].map((item) => (
                 <li key={item}>
                   <Link
-                    to={`/${item.toLocaleLowerCase().replace(/\s/g, "")}`}
+                    to={`/${item
+                      .toLocaleLowerCase()
+                      .normalize("NFD")
+                      .replace(/[\u0300-\u036f]/g, "")
+                      .replace(/\s/g, "")}`}
                     className="block py-2 text-4xl font-semibold"
                     onClick={() => {
                       setMenuOpen(false)
@@ -129,7 +133,7 @@ export default function Nav() {
 
           <li>
             <Link
-              to="/Projects"
+              to="/projects"
               className="text-4xl lg:text-6xl font-bold"
               onClick={() => setMenuOpen(false)}
             >
@@ -146,7 +150,7 @@ export default function Nav() {
               <Icon
                 icon="ri:arrow-down-s-line"
                 width="40"
-                hanging="40"
+                height="40"
                 className={`transition-all duration-300 ${
                   openDropdown === "blogs" ? "rotate-180" : ""
                 }`}

@@ -37,7 +37,6 @@ import brand5 from "../assets/Images/brand5.png"
 import brand6 from "../assets/Images/brand6.png"
 import brand7 from "../assets/Images/brand7.png"
 
-
 export default function Index() {
   const [activeIndex, setActiveIndex] = useState(1)
 
@@ -277,7 +276,7 @@ export default function Index() {
       </div>
 
       {/* About */}
-      <div className="about py-[8%] px-[2%] md:px-[8%] xl:px-[12%] flex justify-between items-star lg:flex-row flex-col gap-10">
+      <div className="about py-[8%] px-[2%] md:px-[8%] xl:px-[12%] flex justify-between items-start lg:flex-row flex-col gap-10">
         <div className="about-content w-full lg:w-[60%]">
           <span className="text-black bg-primary px-2 py-3 font-semibold text-md sm:text-xl rounded-sm">
             Bem-vindos à Nova
@@ -504,7 +503,7 @@ export default function Index() {
                   className="w-full h-auto scale-110 grayscale group-hover:scale-110 group-hover:grayscale-0 transition-all duration-500 ease-[cubic-bezier(0.3,0,0.3,1)]"
                 />
                 <div
-                  className="num absolute -right-3 md:-right-5 bottom-0 text-[180px] sm:text-[200px] md:text-[240px] font-bold leading-[0.5] group-hover:text-primary pointer-events-none transition-all durantion-500 ease-[cubic-bezier(0.3,0,0.3,1)]"
+                  className="num absolute -right-3 md:-right-5 bottom-0 text-[180px] sm:text-[200px] md:text-[240px] font-bold leading-[0.5] group-hover:text-primary pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.3,0,0.3,1)]"
                   style={{
                     textShadow:
                       "1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000",
@@ -558,7 +557,7 @@ export default function Index() {
             options={{
               type: "fade",
               rewind: true,
-              autoPlay: true,
+              autoplay: true,
               interval: 4000,
               pauseOnHover: true,
               arrows: false,
@@ -585,7 +584,7 @@ export default function Index() {
       <div className="grid grid-cols-1 py-[8%] sm:grid-cols-3 gap-12 px-[2%] md:px-[8%] xl:px-[12%]">
         <div className="text-center">
           <h2
-            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            className="text-7xl sm:text-8xl font-bold leading-none"
             style={{
               WebkitTextStroke: "2px white",
             }}
@@ -597,7 +596,7 @@ export default function Index() {
 
         <div className="text-center">
           <h2
-            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            className="text-7xl sm:text-8xl font-bold leading-none"
             style={{
               WebkitTextStroke: "2px white",
             }}
@@ -611,7 +610,7 @@ export default function Index() {
 
         <div className="text-center">
           <h2
-            className="text-7xl sm:text-8xl font-bold leading-none color: transparent; -webkit-text-stroke: 2px rgb(255, 255, 255);"
+            className="text-7xl sm:text-8xl font-bold leading-none"
             style={{
               WebkitTextStroke: "2px white",
             }}
@@ -745,7 +744,7 @@ export default function Index() {
                   </span>
                   {blog.category}
                 </p>
-                <Link 
+                <Link
                   to={`/blog/${blog.id}`}
                   className="text-xl font-semibold hover:text-lime-300 transition"
                 >
@@ -773,94 +772,60 @@ export default function Index() {
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand1} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand1} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand2} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand2} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand3} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand3} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand4} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand4} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand5} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand5} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand6} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand6} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand7} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand7} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
           <Link
             to="https://www.google.com/"
             className="brand-item cursor-pointer border border-gray-50/20 p-5 relative flex justify-center items-center"
           >
-            <img 
-              src={brand2} 
-              alt="brand-image"
-              className="object-contain" 
-            />
+            <img src={brand2} alt="brand-image" className="object-contain" />
             <span>Ver site</span>
           </Link>
         </div>
       </div>
-
-      
     </>
   )
 }
