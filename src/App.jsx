@@ -5,6 +5,8 @@ import Index from "./Pages/Index"
 import Footer from "./Components/Footer"
 import About from "./Pages/About"
 import Team from "./Pages/Team"
+import TeamDetail from "./Pages/TeamDetail"
+import Services from "./Pages/Services"
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
           <Route path="/index" element={<Index />} />
           <Route path="/about" element={<About />} />        
           <Route path="/equipe" element={<Team />} />
+          <Route path="/equipe/:id" element={<TeamDetail />} />
+          <Route path="/servicos" element={<Services />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

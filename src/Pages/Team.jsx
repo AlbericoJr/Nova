@@ -8,10 +8,10 @@ import team4 from "../assets/Images/team-04.png"
 import team5 from "../assets/Images/team-05.jpg"
 import team6 from "../assets/Images/team-06.jpg"
 
-const teamMembers = [
+export const teamMembers = [
   {
     id: 1,
-    name: "André Valadares",
+    name: "André Martins",
     role: "UI/UX Designer",
     img: team1,
     age:  "27 anos",
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Maria Eduarda",
-    role: "Especialista em Marketing Digital",
+    role: "Marketing Digital",
     img: team2,
     age:  "25 anos",
     location: "São José dos Campos, Brasil",
@@ -88,7 +88,7 @@ export default function Team() {
             </Link>
           </li>
           <li>
-            <Link to="/about" className="font-normal text-white text-lg">
+            <Link to="/equipe" className="font-normal text-white text-lg">
               Nossa equipe
             </Link>
           </li>
@@ -96,8 +96,17 @@ export default function Team() {
       </div>
 
       <div className="py-[8%] px-[12%] grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-10">
-
-        
+        {teamMembers.map((member) => (
+          <Link to={`/equipe/${member.id}`} key={member.id}>
+            <div className="text-center">
+              <div className="bg-white rounded-sm overflow-hidden">
+                <img src={member.img} alt={member.name} className="object-cover w-full"/>
+              </div>
+              <h4 className="text-2xl text-white mt-4 font-semibold">{member.name}</h4>
+              <span className="text-lg text-gray-300">{member.role}</span>
+            </div>
+          </Link>
+        ))}
       </div>
     </>
   )
