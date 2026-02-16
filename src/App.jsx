@@ -7,6 +7,7 @@ import About from "./Pages/About"
 import Team from "./Pages/Team"
 import TeamDetail from "./Pages/TeamDetail"
 import Services from "./Pages/Services"
+import Pricingplan from "./Pages/Pricingplan"
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
           <Route path="/equipe" element={<Team />} />
           <Route path="/equipe/:id" element={<TeamDetail />} />
           <Route path="/servicos" element={<Services />} />
-
+          <Route path="/plano" element={<Pricingplan />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -33,4 +34,4 @@ function App() {
 export default App
 
 // https://nova-portfolio-reactjs.vercel.app/
-// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4 3:19:50
+// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4 4:04:40
