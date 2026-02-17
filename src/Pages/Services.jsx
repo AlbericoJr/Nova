@@ -27,13 +27,13 @@ export default function Services() {
     <>
       <div className="section-banner h-[500px] bg-[#121212] px-[2%] md:px-[8%] xl:px-[12%] flex flex-col justify-end items-start text-white w-full">
         <h2 className="text-5xl lg:text-7xl font-semibold w-full lg:max-w-2xl pb-3 relative">
-        Nossos serviços
+          Nossos serviços
           <span className="absolute hidden sm:flex top-0 right-3 w-10 h-10">
             <img src={title_icon} alt="Icon" className="w-full h-full" />
           </span>
         </h2>
         <p className="border-b-2 w-full pb-10 border-gray-300">
-        Nossos valores nos catapultaram ao topo do nosso setor.
+          Nossos valores nos catapultaram ao topo do nosso setor.
         </p>
         <ul className="flex gap-8 py-5">
           <li>
@@ -101,7 +101,7 @@ export default function Services() {
             </ul>
           </div>
         </div>
-        
+
         <div className="ser-item border border-gray-50/20 text-center rounded-sm relative">
           <div className="image bg-primary mx-auto w-30 h-30 md:w-40 md:h-40 p-8 rounded-full transform -translate-y-8 md:-translate-y-14">
             <img src={sericon3} alt="service-icon" />

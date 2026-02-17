@@ -8,6 +8,8 @@ import Team from "./Pages/Team"
 import TeamDetail from "./Pages/TeamDetail"
 import Services from "./Pages/Services"
 import Pricingplan from "./Pages/Pricingplan"
+import Faq from "./Pages/Faq"
+import Projects from "./Pages/Projects"
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/equipe/:id" element={<TeamDetail />} />
           <Route path="/servicos" element={<Services />} />
           <Route path="/plano" element={<Pricingplan />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
       </BrowserRouter>
