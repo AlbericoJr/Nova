@@ -4,6 +4,10 @@ Nova é uma aplicação web moderna construída com **React + Vite** que apresen
 
 O projeto reúne páginas como **Home**, **Serviços**, **Planos**, **Equipe**, **Blog**, **Projetos**, **FAQ** e **Contato**, com um visual profissional, animações suaves e foco em conversão.
 
+### 🌐 Acesse o projeto online
+
+- **Demo:** [`https://nova-psi-pied.vercel.app/`](https://nova-psi-pied.vercel.app/)
+
 ---
 
 ### ✨ Funcionalidades principais
