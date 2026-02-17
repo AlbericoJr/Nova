@@ -15,9 +15,7 @@ import Blog from "./Pages/Blog"
 import BlogDetails from "./Pages/BlogDetails"
 import Contact from "./Pages/Contact"
 
-
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -25,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/index" element={<Index />} />
-          <Route path="/about" element={<About />} />        
+          <Route path="/about" element={<About />} />
           <Route path="/equipe" element={<Team />} />
           <Route path="/equipe/:id" element={<TeamDetail />} />
           <Route path="/servicos" element={<Services />} />
@@ -44,6 +42,3 @@ function App() {
 }
 
 export default App
-
-// https://nova-portfolio-reactjs.vercel.app/
-// YouTube: https://youtu.be/lxDF__dmMNQ?si=rRGblpdtlNpE7tR4 4:04:40
