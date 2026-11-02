@@ -1,4 +1,4 @@
-## Nova – Plataforma de Inteligência para Força de Trabalho e Logística
+## 🌐 Nova – Plataforma de Inteligência para Força de Trabalho e Logística
 
 Nova é uma aplicação web moderna construída com **React + Vite** que apresenta uma landing page completa para uma solução voltada à **gestão da força de trabalho, segurança operacional, logística e dados corporativos**.  
 
@@ -71,7 +71,7 @@ npm -v
 1. **Clonar o repositório**
 
 ```bash
-git clone https://seu-repositorio-aqui.git
+git clone https://github.com/AlbericoJr/Nova.git
 cd Nova
 ```
 
@@ -157,3 +157,8 @@ Basta ajustar textos, imagens, cores em `index.css` e componentes das páginas.
 Defina aqui a licença do projeto (por exemplo, **MIT**, **Proprietária** ou outra de sua preferência).  
 Se este projeto for privado, você pode simplesmente informar que o uso é restrito.
 
+
+
+## Segurança e escopo
+
+Este repositório demonstra uma interface institucional. Não presuma que formulários, serviços comerciais ou dashboards fictícios estejam integrados a sistemas reais. Nunca armazene credenciais em variáveis `VITE_` incorporadas ao cliente.
